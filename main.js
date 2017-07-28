@@ -7,14 +7,14 @@ var fs = require('fs');
 fs.readFile('test1.txt', 'utf8', (err, data) => {
     var rows = data.split('\n');
     for (var k = 0; k < (rows.length - 1); k++) {
-        var object = rows[k].split(' ');
-        var item = new Object;
-        item.id = object[0];
-        item.name = object[1];
-        item.category = object[2];
-        item.expiry = object[3];
-        products[counter] = item;
-        counter++;
+      var object = rows[k].split(' ');
+      var item = new Object;
+      item.id = object[0];
+      item.name = object[1];
+      item.category = object[2];
+      item.expiry = object[3];
+      products[counter] = item;
+      counter++;
     }
     console.log("---------------------Sorting by Name--------------------");
     sortByName();
@@ -24,42 +24,42 @@ fs.readFile('test1.txt', 'utf8', (err, data) => {
 
 function read2() {
     fs.readFile('test2.txt', 'utf8', (err, data) => {
-        var rows = data.split('\n');
+      var rows = data.split('\n');
 
-        for (var k = 0; k < (rows.length - 1); k++) {
-            var object = rows[k].split(' ');
-            var item = new Object;
-            item.id = object[0];
-            item.name = object[1];
-            item.category = object[2];
-            item.expiry = object[3];
-            products[counter] = item;
-            counter++;
-        }
+      for (var k = 0; k < (rows.length - 1); k++) {
+          var object = rows[k].split(' ');
+          var item = new Object;
+          item.id = object[0];
+          item.name = object[1];
+          item.category = object[2];
+          item.expiry = object[3];
+          products[counter] = item;
+          counter++;
+      }
 
-        console.log("---------------------Sorting by Category--------------------");
-        sortByCategory();
-        console.log(products);
-        read3();
+      console.log("---------------------Sorting by Category--------------------");
+      sortByCategory();
+      console.log(products);
+      read3();
     });
 }
 
 function read3() {
     fs.readFile('test3.txt', 'utf8', (err, data) => {
-        //console.log(data);
-        var rows = data.split('\n');
-        //console.log(rows);
-        for (var k = 0; k < (rows.length - 1); k++) {
-            var object = rows[k].split(' ');
-            //console.log(object);
-            var item = new Object;
-            item.id = object[0];
-            item.name = object[1];
-            item.category = object[2];
-            item.expiry = object[3];
-            products[counter] = item;
-            counter++;
-        }
+
+      var rows = data.split('\n');
+
+      for (var k = 0; k < (rows.length - 1); k++) {
+          var object = rows[k].split(' ');
+
+          var item = new Object;
+          item.id = object[0];
+          item.name = object[1];
+          item.category = object[2];
+          item.expiry = object[3];
+          products[counter] = item;
+          counter++;
+      }
 
         console.log("---------------------Sorting by Date--------------------");
         sortByDate();
