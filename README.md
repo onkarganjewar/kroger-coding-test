@@ -9,15 +9,11 @@ For this project, I decided to include a dataset that will have all the attribut
 
   ```Shell
   git clone https://github.com/onkarganjewar/kroger-coding-test.git
+  cd kroger-coding-test/
   ```
 
 2. Run the demo
 
   ```Shell
-  cd kroger-coding-test/
-  ```
-
-  ```Shell
-  # When input is ONLY image files, run this command
   node main.js
   ```
